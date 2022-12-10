@@ -7,27 +7,21 @@
 #include "STUHeathComponent.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class NO_D_3RDP_API USTUHeathComponent : public UActorComponent
 {
-	GENERATED_BODY()
+  GENERATED_BODY()
 
-public:	
-	// Sets default values for this component's properties
-	USTUHeathComponent();
+public:
+  USTUHeathComponent();
 
-	float GetHeath() const { return Health; }
+  float GetHeath() const { return Health; }
 
 protected:
-	// Called when the game starts
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-	float MaxHealth = 100.0f;
-
-	virtual void BeginPlay() override;
-
+  UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+  float MaxHealth = 100.0f;
+  virtual void BeginPlay() override;
 
 private:
-	float Health = 0.0f;
-
-		
+  float Health = 0.0f;
 };

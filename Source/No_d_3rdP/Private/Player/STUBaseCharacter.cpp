@@ -5,21 +5,31 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Components/STUHeathComponent.h"
+
 
 // Sets default values
 ASTUBaseCharacter::ASTUBaseCharacter()
+
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+  // Set this character to call Tick() every frame.  You can turn this off to
+  // improve performance if you don't need it.
+  PrimaryActorTick.bCanEverTick = true;
 
-    SpringArmComponent =
-            CreateDefaultSubobject<USpringArmComponent>("SpringAramComponent");
-        SpringArmComponent->SetupAttachment(GetRootComponent());
-    SpringArmComponent->bUsePawnControlRotation = true;
+  SpringArmComponent =
+      CreateDefaultSubobject<USpringArmComponent>("SpringAramComponent");
+  SpringArmComponent->SetupAttachment(GetRootComponent());
+  SpringArmComponent->bUsePawnControlRotation = true;
 
-	CameraComponent = CreateDefaultSubobject < UCameraComponent > ("CameraComponent");
-    CameraComponent->SetupAttachment(SpringArmComponent);
+  CameraComponent = CreateDefaultSubobject<UCameraComponent>("CameraComponent");
+  CameraComponent->SetupAttachment(SpringArmComponent);
 
+  HealthComponent =
+      CreateDefaultSubobject<USTUHeathComponent>("HealthComponent");
+
+  //  HealthTextComponent =
+  //  CreateDefaultSubobject<UCameraComponent>("HealthTextComponent");
+  //  HealthTextComponent->SetupAttachment(GetRootComponent());
 }
 
 // Called when the game starts or when spawned
@@ -27,12 +37,16 @@ void ASTUBaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+    check(HealthComponent);
+   //     check(HealthTextComponent);
 }
 
 // Called every frame
 void ASTUBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+
 
 }
 
@@ -49,6 +63,8 @@ void ASTUBaseCharacter::SetupPlayerInputComponent(
                                        &ASTUBaseCharacter::LookUP);
         PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this,
                                        &ASTUBaseCharacter::TurnRight);
+        PlayerInputComponent->BindAction("Jump", IE_Pressed, this,
+                                         &ASTUBaseCharacter::Jump);
 }
 
 
