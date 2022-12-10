@@ -12,6 +12,8 @@ public class No_d_3rdP : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
+		//PublicIncludePaths.AddRange(new string[] { "No_d_3rdP/Private/Player/" })
+
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
