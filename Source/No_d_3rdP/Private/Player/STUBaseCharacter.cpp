@@ -55,16 +55,11 @@ void ASTUBaseCharacter::SetupPlayerInputComponent(
     UInputComponent *PlayerInputComponent) {
         Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-        PlayerInputComponent->BindAxis("Move Forward / Backward", this,
-                                       &ASTUBaseCharacter::MoveForward);
-        PlayerInputComponent->BindAxis("Move Right / Left", this,
-                                       &ASTUBaseCharacter::MoveRight);
-        PlayerInputComponent->BindAxis("Look Up / Down Mouse", this,
-                                       &ASTUBaseCharacter::LookUP);
-        PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this,
-                                       &ASTUBaseCharacter::TurnRight);
-        PlayerInputComponent->BindAction("Jump", IE_Pressed, this,
-                                         &ASTUBaseCharacter::Jump);
+        PlayerInputComponent->BindAxis("Move Forward / Backward", this,&ASTUBaseCharacter::MoveForward);
+        PlayerInputComponent->BindAxis("Move Right / Left", this, &ASTUBaseCharacter::MoveRight);
+        PlayerInputComponent->BindAxis("Look Up / Down Mouse", this,&ASTUBaseCharacter::LookUP);
+        PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this,&ASTUBaseCharacter::TurnRight);
+        PlayerInputComponent->BindAction("Jump", IE_Pressed, this,&ASTUBaseCharacter::Jump);
 }
 
 
