@@ -14,4 +14,6 @@ class NO_D_3RDP_API ASTUMenuPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+public:
+    virtual void BeginPlay() override;
 };

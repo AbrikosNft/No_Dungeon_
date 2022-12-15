@@ -10,36 +10,36 @@ void USTUMenuUserWidget::NativeOnInitialized()
 {
     Super::NativeOnInitialized();
 
-    //if (SearchButton)
-    //{
-    //    SearchButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSearch);
-    //}
-    //if (SoloButton)
-    //{
-    //    SoloButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSolo);
-    //}
-    //if (ShopButton)
-    //{
-    //    ShopButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnShop);
-    //}
-    //if (DiaryButton)
-    //{
-    //    DiaryButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnDiary);
-    //}
-    //if (StatisticsButton)
-    //{
-    //    StatisticsButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnStatistics);
-    //}
-    //if (GalleryButton)
-    //{
-    //    GalleryButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnGallery);
-    //}
-    //if (SettingsButton)
-    //{
-    //    SettingsButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSettings);
-    //}
-    if (ExitButton)
+    if (SearchButton)
     {
+        SearchButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSearch);
+    }
+    if (SoloButton)
+    {
+        SoloButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSolo);
+    }
+    if (ShopButton)
+    {
+        ShopButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnShop);
+    }
+    if (DiaryButton)
+    {
+        DiaryButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnDiary);
+    }
+    if (StatisticsButton)
+    {
+        StatisticsButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnStatistics);
+    }
+    if (GalleryButton)
+    {
+        GalleryButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnGallery);
+    }
+    if (SettingsButton)
+    {
+        SettingsButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnSettings);
+    }
+    if (ExitButton)
+   {
         ExitButton->OnClicked.AddDynamic(this, &USTUMenuUserWidget::OnExit);
     }
 }

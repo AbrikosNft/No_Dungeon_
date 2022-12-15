@@ -5,8 +5,9 @@
 #include "Menu/STUMenuPlayerController.h"
 #include "Menu/STUMenuHUD.h"
 
-ASTUMenuGameModeBase::ASTUMenuGameModeBase()
+void ASTUMenuGameModeBase::BeginPlay()
 {
+    Super::BeginPlay();
     PlayerControllerClass = ASTUMenuPlayerController::StaticClass();
     HUDClass = ASTUMenuHUD::StaticClass();
 }

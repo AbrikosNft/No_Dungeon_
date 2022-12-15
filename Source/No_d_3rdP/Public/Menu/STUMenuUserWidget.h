@@ -7,7 +7,7 @@
 #include "Blueprint/UserWidget.h"
 #include "STUMenuUserWidget.generated.h"
 
-class UButon;
+//class UButon;
 /**
  * 
  */
@@ -16,29 +16,31 @@ class NO_D_3RDP_API USTUMenuUserWidget : public UUserWidget
 {
 	GENERATED_BODY()
 	
-protected:
-    UPROPERTY(meta = (BindWidget))
-    UButton* ExitButton;
-    /*UPROPERTY(meta = (BindWidget))
-    UButton* SearchButton;
+
 
     UPROPERTY(meta = (BindWidget))
-    UButton* SoloButton;
+    class UButton* ExitButton;
 
     UPROPERTY(meta = (BindWidget))
-    UButton* ShopButton;
+    class UButton* SearchButton;
 
     UPROPERTY(meta = (BindWidget))
-    UButton* DiaryButton;
+    class UButton* SoloButton;
 
     UPROPERTY(meta = (BindWidget))
-    UButton* StatisticsButton;
+    class UButton* ShopButton;
 
     UPROPERTY(meta = (BindWidget))
-    UButton* GalleryButton;
+    class UButton* DiaryButton;
 
     UPROPERTY(meta = (BindWidget))
-    UButton* SettingsButton;*/
+    class UButton* StatisticsButton;
+
+    UPROPERTY(meta = (BindWidget))
+    class UButton* GalleryButton;
+
+    UPROPERTY(meta = (BindWidget))
+    class UButton* SettingsButton;
 
     
 

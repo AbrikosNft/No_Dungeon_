@@ -15,5 +15,5 @@ class NO_D_3RDP_API ASTUMenuGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
-    ASTUMenuGameModeBase();
+    virtual void BeginPlay() override;
 };
